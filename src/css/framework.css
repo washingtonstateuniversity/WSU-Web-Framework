@@ -1,0 +1,248 @@
+/* --- Variables --- */
+:root {
+
+	/* gutters play a major role in grids,
+	many declorations in the layout depend on the value set for the grid  */
+	--gutter-value: 2em;
+
+	/* set max width for container */
+	--max-content-width: 1000px;
+}
+
+/* --- General reset  --- */
+
+/* set entire document for border box */
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	max-width: var(--max-content-width);
+	margin: 0 auto;
+}
+
+/* --- Gutters --- */
+.row-gutters {
+
+	/* negative margin on container to offset the
+	margins on the blocks at the edges */
+	margin: 0 calc(var(--gutter-value) / -2);
+}
+
+.row-gutters > .block {
+
+	/* half on the sides which will equal a full next to another block */
+	margin: 0 calc(var(--gutter-value) / 2) 0;
+}
+
+/* --- Padding for rows and blocks --- */
+
+/* padding for row only, doesn't apply to blocks */
+.row-pad-all {
+	padding: var(--gutter-value);
+}
+
+.row-pad-vertical {
+	padding-top: var(--gutter-value);
+	padding-bottom: var(--gutter-value);
+}
+
+.row-pad-horizontal {
+	padding-right: var(--gutter-value);
+	padding-left: var(--gutter-value);
+}
+
+.row-pad-top {
+	padding-top: var(--gutter-value);
+}
+
+.row-pad-bottom {
+	padding-bottom: var(--gutter-value);
+}
+
+/* pad all blocks in a row or just and individual block */
+.block-pad,
+.row-pad-children > .block {
+	padding: 1em;
+}
+
+/* remove padding from an individual block where all
+blocks in a row are set to be padded */
+.row-pad-children .block.block-pad-none {
+	padding: 0;
+}
+
+/* --- Align blocks --- */
+
+/* alignment of all blocks of a row */
+.row-align-top {
+	align-items: flex-start;
+}
+
+.row-align-bottom {
+	align-items: flex-end;
+}
+
+.row-align-center {
+	align-items: center;
+}
+
+/* alignment of an individual block */
+.block-align-top {
+	align-self: flex-start;
+}
+
+.block-align-bottom {
+	align-self: flex-end;
+}
+
+.block-align-center {
+	align-self: center;
+}
+
+/* --- Vertically justify content in block by row or by individual block --- */
+.row .block.block-justify-top,
+.row-justify-top > .block {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.row .block.block-justify-center,
+.row-justify-center > .block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.row .block.block-justify-bottom,
+.row-justify-bottom > .block {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+/* --- Bleed rows beyond content wrapper --- */
+
+/* full bleed */
+.row-bleed-full {
+	margin-left: calc(((100vw - var(--max-content-width)) / -2));
+	width: 100vw;
+}
+
+.row-gutters.row-bleed-full .block:first-child {
+	margin-left: 0;
+}
+
+.row-gutters.row-bleed-full .block:last-child {
+	margin-right: 0;
+}
+
+/* bleed right */
+.row-bleed-right {
+	width: calc(var(--max-content-width) + (100vw - var(--max-content-width)) / 2);
+}
+
+.row-gutters.row-bleed-right {
+	width: calc(var(--max-content-width) + ((100vw - var(--max-content-width)) / 2) + var(--gutter-value));
+}
+
+/* bleed left */
+.row-bleed-left {
+	margin-left: calc((100vw - var(--max-content-width)) / -2);
+	width: calc(var(--max-content-width) + (100vw - var(--max-content-width)) / 2);
+}
+
+.row-gutters.row-bleed-left {
+	margin-left: calc((100vw - var(--max-content-width)) / -2 - (var(--gutter-value) / 2));
+	margin-right: 0;
+	width: calc(var(--max-content-width) + ((100vw - var(--max-content-width)) / 2) + var(--gutter-value));
+}
+
+/* --- Grid/layout options --- */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.block {
+
+	/* all blocks start with the same value/width */
+	flex: 1;
+}
+
+.row-block-full > .block,
+.block-full {
+	flex: 0 0 100%;
+}
+
+/* place a size on an individual block */
+.block-1-4 {
+	flex: 0 0 25%;
+}
+
+.row-gutters .block-1-4 {
+
+	/* remove gutter width from block width for consistant layout */
+	flex: 0 0 calc(25% - var(--gutter-value));
+}
+
+.block-1-3 {
+	flex: 0 0 calc(100% / 3);
+}
+
+.row-gutters .block-1-3 {
+	flex: 0 0 calc((100% / 3) - var(--gutter-value));
+}
+
+.block-1-2 {
+	flex: 0 0 50%;
+}
+
+.row-gutters .block-1-2 {
+	flex: 0 0 calc(50% - var(--gutter-value));
+}
+
+.block-2-3 {
+	flex: 0 0 calc(100% / 3 * 2);
+}
+
+.row-gutters .block-2-3 {
+	flex: 0 0 calc((100% / 3 * 2) - var(--gutter-value));
+}
+
+.block-3-4 {
+	flex: 0 0 75%;
+}
+
+.row-gutters .block-3-4 {
+	flex: 0 0 calc(75% - var(--gutter-value));
+}
+
+/* section/row header to populate over all blocks */
+.row-header {
+	flex: 0 0 100%;
+}
+
+.row-gutters .row-header {
+	flex: 0 0 calc(100% - var(--gutter-value));
+}
+
+@media (max-width: 500px) {
+
+	/* all blocks 100% up to screen width prescribed in media query */
+	.row {
+		margin: 0;
+	}
+
+	.row .block {
+		flex: 0 0 100%;
+		margin: 1em 0 0;
+	}
+}
