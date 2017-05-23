@@ -12,6 +12,17 @@
 	height: 40px;
 }
 
+main {
+	min-height: calc(100vh - 176px);
+}
+
+.footer-global,
+.header-global,
+main {
+	margin-left: 60px;
+	width: calc(100% - 60px);
+}
+
 .navigation-open .footer-global,
 .navigation-open .header-global,
 .navigation-open main {

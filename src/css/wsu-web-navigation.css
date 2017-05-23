@@ -2,7 +2,6 @@
 	position: absolute;
 	width: 60px;
 	background: #212121;
-	height: 100%;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -12,8 +11,9 @@
 	width: 300px;
 }
 
-.navigation-main ul {
+.navigation-main > ul {
 	display: none;
+	margin-top: 120px;
 }
 
 .navigation-open .navigation-main ul {
