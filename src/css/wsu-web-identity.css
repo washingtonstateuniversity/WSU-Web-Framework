@@ -1,0 +1,19 @@
+.header-global {
+	background: #fff;
+	border-bottom: 1px solid #777;
+	width: 100%;
+	height: 100px;
+}
+
+.footer-global {
+	background: #fff;
+	border-top: 1px solid #777;
+	width: 100%;
+	height: 40px;
+}
+
+.navigation-open .footer-global,
+.navigation-open .header-global,
+.navigation-open main {
+	margin-left: 300px;
+}

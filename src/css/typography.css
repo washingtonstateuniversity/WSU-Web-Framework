@@ -1,0 +1,14 @@
+ul {
+	list-style: none;
+	font-family: arial, sans-serif;
+	font-size: .8rem;
+}
+
+ul a {
+	color: #fff;
+	text-decoration: none;
+}
+
+ul a:hover {
+	color: #ccc;
+}

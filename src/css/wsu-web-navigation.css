@@ -1,0 +1,21 @@
+.navigation-main {
+	position: absolute;
+	width: 60px;
+	background: #212121;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.navigation-open .navigation-main {
+	width: 300px;
+}
+
+.navigation-main ul {
+	display: none;
+}
+
+.navigation-open .navigation-main ul {
+	display: block;
+}

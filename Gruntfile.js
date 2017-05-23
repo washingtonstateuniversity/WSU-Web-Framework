@@ -18,7 +18,8 @@ module.exports = function( grunt ) {
 					"src/css/typography.css",
 					"src/css/framework.css",
 					"src/css/wsu-identity.css",
-					"src/css/wsu-web-identity.css"
+					"src/css/wsu-web-identity.css",
+					"src/css/wsu-web-navigation.css"
 				],
 				dest: "tmp-style.css"
 			}
