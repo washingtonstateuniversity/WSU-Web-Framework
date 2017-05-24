@@ -67,7 +67,7 @@
 	line-height: 30px;
 }
 
-.navigation-main > ul > li > a {
+.navigation-main > ul .has-items a {
 	display: block;
 	height: 30px;
 	width: 100%;
