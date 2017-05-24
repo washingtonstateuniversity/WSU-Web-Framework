@@ -77,6 +77,23 @@
 	height: auto;
 }
 
-.navigation-main .has-items-open ul {
+.navigation-main .has-items-open > ul {
 	display: block;
+}
+
+.navigation-main .has-items {
+	position: relative;
+}
+
+.navigation-main .has-items:after {
+	content: "+";
+	display: block;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	margin-right: 40px;
+}
+
+.navigation-main .has-items.has-items-open:after {
+	content: "-";
 }
