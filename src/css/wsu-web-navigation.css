@@ -91,7 +91,7 @@
 	color: #fff;
 	position: absolute;
 	top: 0;
-	margin-right: 40px;
+	right: 30px;
 }
 
 .navigation-main .has-items.has-items-open:after {
