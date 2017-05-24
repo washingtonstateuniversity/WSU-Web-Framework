@@ -41,42 +41,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		csslint: {
-			main: {
-				src: [ "style.css" ],
-				options: {
-					"fallback-colors": false,              // Unless we want to support IE8
-					"box-sizing": false,                   // Unless we want to support IE7
-					"compatible-vendor-prefixes": false,   // The library on this is older than autoprefixer.
-					"gradients": false,                    // This also applies ^
-					"overqualified-elements": false,       // We have weird uses that will always generate warnings.
-					"ids": false,
-					"regex-selectors": false,
-					"adjoining-classes": false,
-					"box-model": false,
-					"universal-selector": false,
-					"unique-headings": false,
-					"outline-none": false,
-					"floats": false,
-					"font-sizes": false,
-					"important": false,                    // This should be set to 2 one day.
-					"unqualified-attributes": false,       // Should probably be 2 one day.
-					"qualified-headings": false,
-					"known-properties": 1,                 // Okay to ignore in the case of known unknowns.
-					"duplicate-background-images": 2,
-					"duplicate-properties": 2,
-					"star-property-hack": 2,
-					"text-indent": 2,
-					"display-property-grouping": 2,
-					"shorthand": 2,
-					"empty-rules": false,
-					"vendor-prefix": 2,
-					"zero-units": 2,
-					"order-alphabetical": false
-				}
-			}
-		},
-
 		clean: {
 			options: {
 				force: true
@@ -155,7 +119,6 @@ module.exports = function( grunt ) {
 
 	grunt.loadNpmTasks( "grunt-postcss" );
 	grunt.loadNpmTasks( "grunt-contrib-concat" );
-	grunt.loadNpmTasks( "grunt-contrib-csslint" );
 	grunt.loadNpmTasks( "grunt-contrib-clean" );
 	grunt.loadNpmTasks( "grunt-contrib-watch" );
 	grunt.loadNpmTasks( "grunt-contrib-connect" );
@@ -165,6 +128,6 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( "grunt-stylelint" );
 
 	// Default task(s).
-	grunt.registerTask( "default", [ "jscs", "jshint", "stylelint", "concat", "postcss", "csslint", "clean" ] );
+	grunt.registerTask( "default", [ "jscs", "jshint", "stylelint", "concat", "postcss", "clean" ] );
 	grunt.registerTask( "serve", [ "connect", "watch" ] );
 };
