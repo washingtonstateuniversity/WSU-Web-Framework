@@ -21,10 +21,16 @@
 
 	document.getElementById( "js-navigation-toggle" ).addEventListener( "click", toggle_navigation, false );
 
-	let has_items = document.querySelectorAll( ".has-items > a" );
+	let has_items_anchors = document.querySelectorAll( ".has-items > a" );
+
+	for ( let i = 0; i < has_items_anchors.length; i++ ) {
+		has_items_anchors[ i ].addEventListener( "click", toggle_has_items, false );
+	}
+
+	let has_items = document.getElementsByClassName( "has-items" );
 
 	for ( let i = 0; i < has_items.length; i++ ) {
-		has_items[ i ].addEventListener( "click", toggle_has_items, false );
+		has_items[ i ].setAttribute( "aria-haspopup", true );
 	}
 
 }() );
