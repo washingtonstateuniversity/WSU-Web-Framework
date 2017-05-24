@@ -27,4 +27,5 @@ main {
 .navigation-open .header-global,
 .navigation-open main {
 	margin-left: 300px;
+	width: calc(100% - 300px);
 }
