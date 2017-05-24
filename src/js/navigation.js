@@ -1,5 +1,5 @@
 ( function() {
-	let toggle_menu = function( e ) {
+	let toggle_navigation = function( e ) {
 		e.preventDefault();
 		if ( document.body.classList.contains( "navigation-open" ) ) {
 			document.body.classList.remove( "navigation-open" );
@@ -10,5 +10,21 @@
 		}
 	};
 
-	document.getElementById( "menu-toggle" ).addEventListener( "click", toggle_menu, false );
+	let toggle_has_items = function( e ) {
+		e.preventDefault();
+		if ( this.parentNode.classList.contains( "has-items-open" ) ) {
+			this.parentNode.classList.remove( "has-items-open" );
+		} else {
+			this.parentNode.classList.add( "has-items-open" );
+		}
+	};
+
+	document.getElementById( "js-navigation-toggle" ).addEventListener( "click", toggle_navigation, false );
+
+	let has_items = document.querySelectorAll( ".has-items > a" );
+
+	for ( let i = 0; i < has_items.length; i++ ) {
+		has_items[ i ].addEventListener( "click", toggle_has_items, false );
+	}
+
 }() );

@@ -16,11 +16,11 @@
 	margin-top: 120px;
 }
 
-.navigation-open .navigation-main ul {
+.navigation-open .navigation-main > ul {
 	display: block;
 }
 
-#menu-toggle {
+.navigation-toggle {
 	position: absolute;
 	display: block;
 	top: 0;
@@ -36,9 +36,47 @@
 	cursor: pointer;
 }
 
-.navigation-open #menu-toggle {
+.navigation-open .navigation-toggle {
 	height: 60px;
 	width: 60px;
 	right: 10px;
 	left: initial;
+}
+
+.navigation-main ul {
+	list-style: none;
+	font-family: arial, sans-serif;
+	font-size: .8rem;
+}
+
+.navigation-main ul a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navigation-main ul a:hover {
+	color: #ccc;
+}
+
+.navigation-main ul ul {
+	display: none;
+}
+
+.navigation-main > ul > li {
+	height: 30px;
+	line-height: 30px;
+}
+
+.navigation-main > ul > li > a {
+	display: block;
+	height: 30px;
+	width: 100%;
+}
+
+.navigation-main > ul > .has-items-open {
+	height: auto;
+}
+
+.navigation-main .has-items-open ul {
+	display: block;
 }

@@ -11,19 +11,19 @@
 	<header class="header-global">
 		The global header.
 	</header>
-	<nav id="navigation-main" class="navigation-main">
-		<button id="menu-toggle">Menu</button>
+	<nav class="navigation-main" role="navigation" aria-label="Site navigation">
+		<button id="js-navigation-toggle" class="navigation-toggle">Menu</button>
 		<ul>
 			<li><a href="/">Web Communication</a></li>
-			<li><a href="#">Community</a>
-				<ul class="sub-menu">
+			<li class="has-items"><a href="#">Community</a>
+				<ul>
 					<li><a href="/open-lab/">Open Lab</a></li>
 					<li><a href="/slack-team/">WSU Web on Slack</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Guides</a>
+			<li class="has-items"><a href="#">Guides</a>
 				<ul>
-					<li><a href="/guides/accessibility/">Accessibility</a>
+					<li class="has-items"><a href="/guides/accessibility/">Accessibility</a>
 						<ul>
 							<li><a href="/guides/accessibility/accessibility-checklist/">Accessibility checklist</a></li>
 							<li><a href="/guides/accessibility/tools/">Tools</a></li>
@@ -48,14 +48,14 @@
 							<li><a href="/guides/accessibility/writing-guide/">Writing guide</a></li>
 						</ul>
 					</li>
-					<li><a href="/guides/server-administration/">Server Administration</a>
+					<li class="has-items"><a href="/guides/server-administration/">Server Administration</a>
 						<ul>
 							<li><a href="/guides/server-administration/provision-a-wsu-web-server/">Provision a WSU web server</a></li>
 						</ul>
 					</li>
 				</ul>
 			</li>
-			<li><a href="/wordpress/">WordPress at WSU</a>
+			<li class="has-items"><a href="/wordpress/">WordPress at WSU</a>
 				<ul>
 					<li><a href="/wordpress/build-custom-theme/">Custom Themes</a></li>
 					<li><a href="/wordpress/build-custom-plugin/">Custom Plugins</a></li>
@@ -63,11 +63,11 @@
 					<li><a href="/wordpress/code-review/">Code Review</a></li>
 					<li><a href="/wordpress/plugin-criteria/">Plugin Criteria</a></li>
 					<li><a href="/wordpress/local-wsuwp-development/">Local WSUWP Development</a></li>
-					<li><a href="#">Plugins</a>
-						<ul class="sub-menu">
+					<li class="has-items"><a href="#">Plugins</a>
+						<ul>
 							<li><a href="/wordpress/plugins/wsuwp-content-syndicate/">WSUWP Content Syndicate</a></li>
 							<li><a href="/wordpress/plugins/content-visibility/">WSUWP Content Visibility</a></li>
-							<li><a href="#">Events Calendar</a>
+							<li class="has-items"><a href="#">Events Calendar</a>
 								<ul>
 									<li><a href="/events-calendar-syndication/">Syndication</a></li>
 								</ul>
@@ -80,13 +80,13 @@
 							<li><a href="/wordpress/plugins/wsuwp-video-backgrounds/">WSUWP Video Backgrounds</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Themes</a>
+					<li class="has-items"><a href="#">Themes</a>
 						<ul>
 							<li><a href="/wordpress/themes/creating-child-themes/">Creating Child Themes</a></li>
 							<li><a href="/anatomy-of-a-theme/">Anatomy of a WordPress Theme</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Users</a>
+					<li class="has-items"><a href="#">Users</a>
 						<ul>
 							<li><a href="/wordpress/users/adding-new-users/">Adding New Users</a></li>
 							<li><a href="/user-roles/">User Roles</a></li>
