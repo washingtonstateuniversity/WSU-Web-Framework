@@ -35,3 +35,10 @@
 	margin: 0;
 	cursor: pointer;
 }
+
+.navigation-open #menu-toggle {
+	height: 60px;
+	width: 60px;
+	right: 10px;
+	left: initial;
+}
