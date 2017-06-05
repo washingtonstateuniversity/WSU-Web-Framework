@@ -63,13 +63,13 @@
 }
 
 .navigation-main > ul > li {
-	height: 30px;
-	line-height: 30px;
+	height: 44px;
+	line-height: 44px;
 }
 
 .navigation-main > ul .has-items a {
 	display: block;
-	height: 30px;
+	height: 44px;
 	width: 100%;
 }
 
