@@ -1,0 +1,87 @@
+<style>
+
+.wsu-person * {
+	margin: 0;
+}
+
+.wsu-person .card {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wsu-person header {
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.wsu-person .name,
+.wsu-person .degree {
+	display: inline-block;
+}
+
+.wsu-person .degree:after {
+	content: ",";
+}
+
+.wsu-person .degree:last-of-type:after {
+	content: none;
+}
+
+.wsu-person .photo {
+	display: block;
+	width: 198px;
+}
+
+.wsu-person .photo img {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+}
+
+.wsu-person .contact {
+	margin-left: 2rem;
+}
+
+.wsu-person .contact span {
+	display: block;
+}
+
+.wsu-person .about {
+	margin-top: 2rem;
+}
+
+</style>
+
+<article class="wsu-person">
+
+	<div class="card">
+
+		<header>
+			<h1 class="name">Name</h1>
+			<span class="degree">B.A.</span>
+			<span class="degree">M.S.</span>
+			<span class="degree">Ph.D.</span>
+		</header>
+
+		<figure class="photo">
+			<img src="https://avatars3.githubusercontent.com/u/6403569" alt="Profile" width="198" height="198" />
+		</figure>
+
+		<div class="contact">
+			<span class="title">Title</span>
+			<span class="title">A second title</span>
+			<span class="title">A third title</span>
+			<span class="email"><a href="#">email@wsu.edu</a></span>
+			<span class="phone">509-335-5555</span>
+			<span class="office">Office</span>
+			<span class="address">Location</span>
+			<span class="website"><a href="#">website</a></span>
+		</div>
+
+	</div>
+
+	<div class="about">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat volutpat dolor eu egestas. Proin fermentum, dolor non lacinia bibendum, lorem orci volutpat dui, id hendrerit risus nibh a sem. Duis purus tortor, fringilla quis arcu a, mollis bibendum magna. Proin auctor id nisi vel finibus. In volutpat venenatis eros ut faucibus. Donec interdum massa eu molestie dignissim. Aenean facilisis iaculis magna scelerisque blandit. Morbi finibus enim lectus, in vehicula magna commodo et. Phasellus ac felis elit. Etiam porttitor ante massa, at congue velit posuere at. Donec ac libero eros. Nulla facilisi. Sed in purus nec ipsum elementum feugiat. Nulla eleifend ex eget nisi interdum vehicula.</p>
+	</div>
+
+</article>
