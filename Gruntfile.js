@@ -108,7 +108,7 @@ module.exports = function( grunt ) {
 		connect: {
 			server: {
 				options: {
-					open: true,
+					open: "http://localhost:8000/style-guide/",
 					port: 8000,
 					hostname: "localhost"
 				}
