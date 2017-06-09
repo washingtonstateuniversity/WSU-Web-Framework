@@ -18,7 +18,8 @@ module.exports = function( grunt ) {
 					"src/css/typography.css",
 					"src/css/framework.css",
 					"src/css/wsu-identity.css",
-					"src/css/wsu-web-identity.css"
+					"src/css/wsu-web-identity.css",
+					"src/css/wsu-web-navigation.css"
 				],
 				dest: "tmp-style.css"
 			}
@@ -37,42 +38,6 @@ module.exports = function( grunt ) {
 			dist: {
 				src: "tmp-style.css",
 				dest: "style.css"
-			}
-		},
-
-		csslint: {
-			main: {
-				src: [ "style.css" ],
-				options: {
-					"fallback-colors": false,              // Unless we want to support IE8
-					"box-sizing": false,                   // Unless we want to support IE7
-					"compatible-vendor-prefixes": false,   // The library on this is older than autoprefixer.
-					"gradients": false,                    // This also applies ^
-					"overqualified-elements": false,       // We have weird uses that will always generate warnings.
-					"ids": false,
-					"regex-selectors": false,
-					"adjoining-classes": false,
-					"box-model": false,
-					"universal-selector": false,
-					"unique-headings": false,
-					"outline-none": false,
-					"floats": false,
-					"font-sizes": false,
-					"important": false,                    // This should be set to 2 one day.
-					"unqualified-attributes": false,       // Should probably be 2 one day.
-					"qualified-headings": false,
-					"known-properties": 1,                 // Okay to ignore in the case of known unknowns.
-					"duplicate-background-images": 2,
-					"duplicate-properties": 2,
-					"star-property-hack": 2,
-					"text-indent": 2,
-					"display-property-grouping": 2,
-					"shorthand": 2,
-					"empty-rules": false,
-					"vendor-prefix": 2,
-					"zero-units": 2,
-					"order-alphabetical": false
-				}
 			}
 		},
 
@@ -124,7 +89,8 @@ module.exports = function( grunt ) {
 					undef: true,
 					unused: true,
 					browser: true, // Define globals exposed by modern browsers.
-					jquery: true   // Define globals exposed by jQuery.
+					jquery: true,  // Define globals exposed by jQuery.
+					esversion: 6
 				}
 			}
 		},
@@ -142,7 +108,7 @@ module.exports = function( grunt ) {
 		connect: {
 			server: {
 				options: {
-					open: true,
+					open: "http://localhost:8000/style-guide/",
 					port: 8000,
 					hostname: "localhost"
 				}
@@ -153,7 +119,6 @@ module.exports = function( grunt ) {
 
 	grunt.loadNpmTasks( "grunt-postcss" );
 	grunt.loadNpmTasks( "grunt-contrib-concat" );
-	grunt.loadNpmTasks( "grunt-contrib-csslint" );
 	grunt.loadNpmTasks( "grunt-contrib-clean" );
 	grunt.loadNpmTasks( "grunt-contrib-watch" );
 	grunt.loadNpmTasks( "grunt-contrib-connect" );
@@ -163,6 +128,6 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( "grunt-stylelint" );
 
 	// Default task(s).
-	grunt.registerTask( "default", [ "jscs", "jshint", "stylelint", "concat", "postcss", "csslint", "clean" ] );
+	grunt.registerTask( "default", [ "jscs", "jshint", "stylelint", "concat", "postcss", "clean" ] );
 	grunt.registerTask( "serve", [ "connect", "watch" ] );
 };
