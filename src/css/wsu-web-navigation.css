@@ -1,0 +1,99 @@
+.navigation-main {
+	position: absolute;
+	width: 60px;
+	background: #404040;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.navigation-open .navigation-main {
+	width: 300px;
+}
+
+.navigation-main > ul {
+	display: none;
+	margin-top: 120px;
+}
+
+.navigation-open .navigation-main > ul {
+	display: block;
+}
+
+.navigation-toggle {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 100%;
+	background: #404040;
+	color: #fff;
+	font-size: 1.2em;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+.navigation-open .navigation-toggle {
+	height: 60px;
+	width: 60px;
+	right: 10px;
+	left: initial;
+}
+
+.navigation-main ul {
+	list-style: none;
+	font-family: arial, sans-serif;
+	font-size: .8rem;
+}
+
+.navigation-main ul a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navigation-main ul a:hover {
+	color: #ccc;
+}
+
+.navigation-main ul ul {
+	display: none;
+}
+
+.navigation-main > ul > li {
+	height: 44px;
+	line-height: 44px;
+}
+
+.navigation-main > ul .has-items a {
+	display: block;
+	height: 44px;
+	width: 100%;
+}
+
+.navigation-main > ul > .has-items-open {
+	height: auto;
+}
+
+.navigation-main .has-items-open > ul {
+	display: block;
+}
+
+.navigation-main .has-items {
+	position: relative;
+}
+
+.navigation-main .has-items:after {
+	content: "+";
+	display: block;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 30px;
+}
+
+.navigation-main .has-items.has-items-open:after {
+	content: "-";
+}
