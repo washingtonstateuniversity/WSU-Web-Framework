@@ -1,33 +1,38 @@
 .navigation-main {
-	position: absolute;
-	width: 60px;
 	background: #404040;
-	top: 0;
-	bottom: 0;
-	left: 0;
+	position: relative;
+	width: 60px;
+	transition: width .3s ease;
+}
+
+.navigation-main > ul {
+	display: none;
+	margin-top: 120px;
+	opacity: 0;
 }
 
 .navigation-open .navigation-main {
 	width: 300px;
 }
 
-.navigation-main > ul {
-	display: none;
-	margin-top: 120px;
-}
-
 .navigation-open .navigation-main > ul {
 	display: block;
+	animation-name: fade-in;
+	animation-delay: .3s;
+	animation-duration: .2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
 }
 
+/* toggle */
 .navigation-toggle {
+	background: transparent;
 	position: absolute;
 	display: block;
 	top: 0;
-	left: 0;
+	right: 0;
 	width: 60px;
 	height: 100%;
-	background: #404040;
 	color: #fff;
 	font-size: 1.2em;
 	border: 0;
@@ -38,14 +43,13 @@
 
 .navigation-open .navigation-toggle {
 	height: 60px;
-	width: 60px;
 	right: 10px;
 	left: initial;
 }
 
+/* navigation links */
 .navigation-main ul {
 	list-style: none;
-	font-family: arial, sans-serif;
 	font-size: .8rem;
 }
 
@@ -92,6 +96,7 @@
 	position: absolute;
 	top: 0;
 	right: 30px;
+	z-index: -1;
 }
 
 .navigation-main .has-items.has-items-open:after {
