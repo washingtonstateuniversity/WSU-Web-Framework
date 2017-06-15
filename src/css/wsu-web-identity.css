@@ -21,6 +21,11 @@ body {
 	min-height: 100vh;
 }
 
+body.navigation-horizontal {
+	grid-template-columns: 1fr;
+	grid-template-areas: "header" "nav" "main" "footer";
+}
+
 .header-global {
 	background: #fff;
 	border-bottom: 1px solid #777;

@@ -7,7 +7,6 @@
 
 .navigation-main > ul {
 	display: none;
-	margin-top: 120px;
 	opacity: 0;
 }
 
@@ -101,4 +100,22 @@
 
 .navigation-main .has-items.has-items-open:after {
 	content: "-";
+}
+
+/* horizontal navigation */
+.navigation-horizontal .navigation-main {
+	width: 100%;
+	min-height: 30px;
+}
+
+.navigation-horizontal .navigation-main > ul {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 0;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.navigation-horizontal .navigation-main .has-items:after {
+	right: -30px;
 }
